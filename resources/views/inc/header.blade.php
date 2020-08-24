@@ -13,10 +13,10 @@
             <button class="btn btn-album btn-sm mr-3">
               <a href="/">ホーム</a>
              </button>
-             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" data-show-count="false">Tweet </a>
+             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" >Tweet </a>
               {{-- <img src="https://noode.info/images/icon_twitter.png" alt="ツイッターでこのサイトをシェアする" title="ツイッターでこのサイトをシェアする">
             --}}
-             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+             
           </div>
             </div>
           
