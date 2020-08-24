@@ -12,6 +12,9 @@ class CommentsController extends Controller
         $params = $request->validate([
             'post_id' => 'required|exists:posts,id',
             'body' => 'required|max:2000',
+        ],
+        [
+            'body.required' => 'コメントしてね'
         ]);
         
         $post = Post::findOrFail($params['post_id']);

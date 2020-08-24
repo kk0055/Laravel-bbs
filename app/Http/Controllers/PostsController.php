@@ -9,7 +9,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::with(['comments'])->orderBy('created_at','desc')->paginate(10);
+        $posts = Post::with(['comments'])->orderBy('created_at','desc')->paginate(20);
 
         return view('posts.index',['posts' => $posts]);
     }
@@ -24,6 +24,10 @@ class PostsController extends Controller
             'title' => 'required|max:50',
             'body' => 'required|max:2000',
             'cover_image' => 'image|nullable|max:1999'
+        ],
+        [
+           
+            'title.max' => '50文字までだよ'
         ]);
 
         if($request->hasFile('cover_image')){

@@ -4,8 +4,8 @@
 
     <div class="container mt-4">
         <div class="border p-4">
-            <h1 class="h5 mb-4">
-                <div class="mb-4 text-right">
+            <div class=" mb-4 ">
+                {{-- <div class="mb-4 text-right">
                     <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post]) }}">
                         編集する
                     </a>
@@ -19,19 +19,21 @@
 
     <button class="btn btn-danger">削除する</button>
 </form>
-                </div>
-                {{ $post->title }}
-            </h1>
+                </div> --}}
+                <div class="show-text mb-3">
+               タイトル : {{ $post->title }}
+            </div>
+            </div>
 
-            <p class="mb-5">
+            <div class="show-text mb-3">
                 {!! nl2br(e($post->body)) !!}
-            </p>
+            </div>
 
             <section>
 
-                <h2 class="h5 mb-4">
-                    コメント
-                </h2>
+                <h4 class=" mb-2">
+                    
+                </h4>
 <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
     @csrf
 
@@ -43,7 +45,7 @@
 
     <div class="form-group">
         <label for="body">
-            本文
+            コメント
         </label>
 
         <textarea
@@ -60,22 +62,25 @@
     </div>
 
     <div class="mt-4">
+        <a class="btn btn-secondary" href="{{ route('top') }}">
+            キャンセル
+        </a>
         <button type="submit" class="btn btn-primary">
             コメントする
         </button>
     </div>
 </form>
                 @forelse($post->comments as $comment)
-                    <div class="border-top p-4">
+                    <div class="border-top ">
                         <time class="text-secondary">
                             {{ $comment->created_at->format('Y.m.d H:i') }}
                         </time>
-                        <p class="mt-2">
+                        <div class="mt-2">
                             {!! nl2br(e($comment->body)) !!}
-                        </p>
+                        </div>
                     </div>
                 @empty
-                    <p>コメントはまだありません。</p>
+                    <div>コメントはまだありません。</div>
                 @endforelse
             </section>
         </div>

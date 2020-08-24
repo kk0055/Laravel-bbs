@@ -1,13 +1,14 @@
 @extends('layout')
 
 @section('content')
+@include('inc.header')
 
-    <div class="container mt-4">
+    <div class="container-posts">
       <div class="mb-4">
         <div class="container mt-4">
             <div class="border p-4">
-                <h1 class="h5 mb-4">
-                    投稿の新規作成
+                <h1 class="h5 mb-2">
+                    投稿の作成
                 </h1>
     
                 <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data" >
@@ -54,7 +55,7 @@
                             <input type="file" name="cover_image"> 
                     
                                 </div>
-                        <div class="mt-5">
+                        <div class="mt-2">
                             <a class="btn btn-secondary" href="{{ route('top') }}">
                                 キャンセル
                             </a>
@@ -68,58 +69,67 @@
             </div>
         </div>
       </div>
-        @foreach ($posts as $post)
-            <div class="card mb-4">
-                <div class="card-header">
-                    {{ $post->title }}
-                </div>
-              {{-- Body --}}
+      {{-- Post --}}
       
-                  
+      <div class="container mt-4">
+        <div class="d-flex justify-content-center mb-2 mt-2">
+            {{ $posts->links() }}
+        </div>
+            @foreach ($posts as $post)
+                <div class="card mb-4">
+                
+              {{-- Body --}}
+             
+            
+           
                
-            </div>
-                <div class="card">
-                    <span class="mr-2">
-                        
-                        投稿日時 {{ $post->created_at->format('Y.m.d') }}
-                    </span>
 
-                    @if ($post->comments->count())
-                        <span class="badge badge-primary">
-                            コメント {{ $post->comments->count() }}件
-                        </span>
-                    @endif
-                    <div class="card-body">
-                        <p class="card-text">
+                
+                    <div class="card-body box">
+
+                      {{ $post->title }} |
+                        投稿日時 : {{ $post->created_at->format('Y/m/d H:i') }}
+                        <h6 class="card-text mt-3">
                             @if (strpos($post->body,'http') !== false)
                             <a href="{{$post->body }} " target="_blank">{{$post->body }}</a>   
-                        </p>
-                    <p class="card-text">
+                        </h6>
+                    {{-- <p class="card-text">
                             @elseif (strpos($post->body,'youtube') !== false)
                             <iframe width="560" height="315" src="{{$post->body }}" frameborder="0"  allowfullscreen></iframe>
-                        </p>
+                        </p> --}}
                       @else
-                      <p class="card-text">
-                        <p>{{$post->body }}</p> 
-                    </p>
+                      <div class="card-text">
+                        <h6>{{$post->body }}</h6> 
+                    </div>
                         
                             @endif
 
            <div class="row">
-           <img width="30%" src="/storage/cover_images/{{$post->cover_image}}" alt="">
+           <img width="20" class="posted-img" src="/storage/cover_images/{{$post->cover_image}}" alt="">
            </div>
-             
-                     <button class="btn ">
+         
+                     <button class="btn btn-sm ">
                   <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
-                   <span>コメント</span>   
+                   <span>コメントする</span>   
                   </a>
                 </button>
+                @if ($post->comments->count())
+                <span class="badge badge-info ml-2">
+                    コメント {{ $post->comments->count() }}件
+                </span>
+            @endif
                 </div>
+
+
             </div>
         @endforeach
-        <div class="d-flex justify-content-center mb-5">
+        <div class="d-flex justify-content-center mb-5 mt-3">
             {{ $posts->links() }}
         </div>
-    </div>
- 
+       </div>
+    
+</div>
+
+@include('inc.footer')
+
 @endsection
