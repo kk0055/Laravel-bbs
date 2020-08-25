@@ -13,9 +13,11 @@
             <button class="btn btn-album btn-sm mr-3">
               <a href="/">ホーム</a>
              </button>
-             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" >Tweet </a>
-              {{-- <img src="https://noode.info/images/icon_twitter.png" alt="ツイッターでこのサイトをシェアする" title="ツイッターでこのサイトをシェアする">
-            --}}
+
+             {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" > </a> --}}
+             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"target="_blank" >
+              <img src="https://noode.info/images/icon_twitter.png" alt="ツイッターでこのサイトをシェアする" title="ツイッターでこのサイトをシェアする" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" width="30" height="30">
+             </a> 
              
           </div>
             </div>

@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="マレーシア ペットちゃんねるはマレーシアでペットを飼っている人達が情報共有できる掲示板。">
     <meta name="keywords" content="犬,マレーシア,ペット,海外,東南アジア,掲示板">
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <title>マレーシア ペットちゃんねる</title>

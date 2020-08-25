@@ -13,7 +13,9 @@ body{
 	overflow: auto;
 }
 
-
+.twitter-share-button{
+	font-size: 5px;
+}
 
 .album-title {
 	text-align: center;
@@ -101,10 +103,6 @@ box-shadow: 2px 2px 5px #ccc;
 	border-radius: 5px;
 	overflow: auto;  /*消すかも*/
 }
-
-
-
-
 
 
 .posted-img{

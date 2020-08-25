@@ -8,11 +8,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
-        
-            <a  class="btn btn-info" href="/">ホーム</a>
-           
+       
+          
+         
           <ul class="navbar-nav mr-auto">
-
+<li>  <a  class="btn btn-info mt-2" href="/">ホーム</a></li>
           </ul>
 
           <!-- Right Side Of Navbar -->
@@ -21,7 +21,7 @@
                           <a class="nav-link" href="/">アカウントを作成</a>
                       </li> -->
                                                           <li class="nav-item">
-                <a class="btn btn-primary newpost_btn" href="/albums/create">画像を投稿する</a>
+                <a class="btn btn-primary newpost_btn mt-2" href="/albums/create">画像を投稿する</a>
               </li>
           </ul>
       </div>
