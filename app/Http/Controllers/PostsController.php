@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -30,25 +31,34 @@ class PostsController extends Controller
             'title.max' => '50文字までだよ'
         ]);
 
-        if($request->hasFile('cover_image')){
+        //heroku以外
+    //     if($request->hasFile('cover_image')){
           
-        $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
-        $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME); 
-        $extension = $request->file('cover_image')->getClientOriginalExtension();
+    //     $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+    //     $filename = pathinfo($filenameWithExt,PATHINFO_FILENAME); 
+    //     $extension = $request->file('cover_image')->getClientOriginalExtension();
 
-        $fileNameToStore= $filename.'_'.time().'.'.$extension;
-        $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+    //     $fileNameToStore= $filename.'_'.time().'.'.$extension;
+    //     $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
 
-    }else {
-        $fileNameToStore= 'noimage.jpg';
-    }
+    // }else {
+    //     $fileNameToStore= 'noimage.jpg';
+    // }
+        // $post = new Post;
+        // $post->title =$request->input('title');
+        // $post->body =$request->input('body');
+        // $post->cover_image =$fileNameToStore;
+               
+        // $post->save();
 
-
+  
         $post = new Post;
         $post->title =$request->input('title');
         $post->body =$request->input('body');
-        $post->cover_image =$fileNameToStore;
-               
+        $uploadImg =  $post->cover_image =$request->file('cover_image');;
+        $path = Storage::disk('s3')->putFile('/posts', $uploadImg, 'public');
+        $post->cover_image = Storage::disk('s3')->url($path);
+        
         $post->save();
 
         // Post::create($params);

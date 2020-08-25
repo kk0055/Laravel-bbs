@@ -1,5 +1,7 @@
-*{
-  font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
+body{
+  
 	margin: 0;
 	box-sizing: border-box;
 	
@@ -17,8 +19,28 @@
 	text-align: center;
 	color: #66ccff;
 	margin: 30px 30px;
-
 }
+.album-title-main {
+	text-align: center;
+	margin: 30px 30px;
+	position: relative;
+  padding: 0.3em;
+  background: #a6d3c8;
+	color: white;
+	border-radius: 10px;
+}
+
+.album-title-main:before {
+	position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+
+
  p.album-title {
 	text-align: center;
 	color: black;
