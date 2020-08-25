@@ -54,21 +54,24 @@ class PostsController extends Controller
 
   
      
-     
+        $post = new Post;
 
         if($request->hasFile('cover_image')){
+
             $uploadImg =  $post->cover_image = $request->file('cover_image');
             $path = Storage::disk('s3')->putFile('/posts', $uploadImg, 'public');
-            $post->cover_image = Storage::disk('s3')->url($path);
+            $post->cover_image  = Storage::disk('s3')->url($path);
             
-        }  else{
+        }  else {
 
             $fileNameToStore = 'noimage.jpg';
+            $post->cover_image = $fileNameToStore;
         }
-        $post = new Post;
+
+        
         $post->title =$request->input('title');
         $post->body =$request->input('body');
-        $post->cover_image =$fileNameToStore;
+       
 
          $post->save();
     
