@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
@@ -52,14 +53,27 @@ class PostsController extends Controller
         // $post->save();
 
   
+     
+     
+
+        if($request->hasFile('cover_image')){
+            $uploadImg =  $post->cover_image = $request->file('cover_image');
+            $path = Storage::disk('s3')->putFile('/posts', $uploadImg, 'public');
+            $post->cover_image = Storage::disk('s3')->url($path);
+            
+        }  else{
+
+            $fileNameToStore = 'noimage.jpg';
+        }
         $post = new Post;
         $post->title =$request->input('title');
         $post->body =$request->input('body');
-        $uploadImg =  $post->cover_image =$request->file('cover_image');;
-        $path = Storage::disk('s3')->putFile('/posts', $uploadImg, 'public');
-        $post->cover_image = Storage::disk('s3')->url($path);
+        $post->cover_image =$fileNameToStore;
+
+         $post->save();
+    
         
-        $post->save();
+       
 
         // Post::create($params);
 

@@ -56,7 +56,7 @@ class AlbumsController extends Controller
         // $album->photo =$fileNameToStore;
         $album = new Album;
         $album->title =$request->input('title'); 
-        $uploadImg =  $album->photo =$request->file('photo');;
+        $uploadImg =  $album->photo =$request->file('photo');
         $path = Storage::disk('s3')->putFile('/album', $uploadImg, 'public');
         $album->photo = Storage::disk('s3')->url($path);
         $album->save();
