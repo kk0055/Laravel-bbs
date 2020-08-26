@@ -105,7 +105,7 @@
                 @endif
 
            <div class="row" width="50%" height="50%">
-           <img width="20%" height="20%" class="posted-img" src="{{$post->cover_image}}" alt="">
+           <img width="30%" height="30%" class="posted-img" src="{{$post->cover_image}}" alt="">
            </div>
          
                      <button class="btn btn-sm ">
