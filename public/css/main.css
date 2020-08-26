@@ -115,7 +115,6 @@ box-shadow: 2px 2px 5px #ccc;
 	margin-bottom: 8px;
 	margin-top: 8px;
 	margin-left: 10px;
-	
 }
 
 
@@ -230,6 +229,12 @@ footer {
 	.header p{
 		font-size: 25px;
 		text-align: center;
+	}
+	.posted-img{
+		margin-bottom: 8px;
+		margin-top: 8px;
+		margin-left: 10px;
+		width:150px;
 	}
 }
 
