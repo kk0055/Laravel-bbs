@@ -29,7 +29,7 @@ body{
   padding: 0.3em;
   background: #a6d3c8;
 	color: white;
-	border-radius: 10px;
+	border-radius: 4px;
 }
 
 .album-title-main:before {
@@ -106,7 +106,7 @@ box-shadow: 2px 2px 5px #ccc;
 
 
 .posted-img{
-	width:200px;
+	width:25%;
 	margin-bottom: 8px;
 	margin-top: 8px;
 }
