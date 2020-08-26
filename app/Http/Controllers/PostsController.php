@@ -25,7 +25,7 @@ class PostsController extends Controller
         $params = $request->validate([
             'title' => 'required|max:50',
             'body' => 'required|max:2000',
-            'cover_image' => 'image|nullable|max:1999'
+            'cover_image' => 'image|nullable'
         ],
         [
            

@@ -28,7 +28,7 @@ class AlbumsController extends Controller
     {
         $this->validate($request,[
            'title' => 'required|max:50',
-           'photo'=> 'required|image|max:1999'
+           'photo'=> 'required|image'
         ],
        [
            'title.required' => 'ひとこと入力してね',
