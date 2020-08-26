@@ -234,7 +234,8 @@ footer {
 		margin-bottom: 8px;
 		margin-top: 8px;
 		margin-left: 10px;
-		width:150px;
+		width:180px;
+		height: auto;
 	}
 }
 
