@@ -102,10 +102,10 @@
                         <h6>{{$post->body }}</h6> 
                     </div>
                         
-                            @endif
+                @endif
 
-           <div class="row" width="100%">
-           <img width="150px" height="150px" class="posted-img" src="{{$post->cover_image}}" alt="">
+           <div class="row" width="50%" height="50%">
+           <img width="20%" height="20%" class="posted-img" src="{{$post->cover_image}}" alt="">
            </div>
          
                      <button class="btn btn-sm ">
