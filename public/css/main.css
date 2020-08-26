@@ -105,6 +105,12 @@ box-shadow: 2px 2px 5px #ccc;
 }
 
 
+
+.posted-img-div{
+	width: 50%;
+	height: auto;
+}
+
 .posted-img{
 	margin-bottom: 8px;
 	margin-top: 8px;

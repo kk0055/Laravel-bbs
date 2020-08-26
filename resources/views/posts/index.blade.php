@@ -98,13 +98,13 @@
                             <iframe width="560" height="315" src="{{$post->body }}" frameborder="0"  allowfullscreen></iframe>
                         </p> --}}
                       @else
-                      <div class="card-text">
+                      <div class="card-text-desc">
                         <h6>{{$post->body }}</h6> 
                     </div>
                         
                 @endif
 
-           <div class="row" width="50%" height="50%">
+           <div class="posted-img-div" >
            <img width="30%" height="30%" class="posted-img" src="{{$post->cover_image}}" alt="">
            </div>
          
