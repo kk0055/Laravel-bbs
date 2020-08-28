@@ -103,11 +103,12 @@
                     </div>
                         
                 @endif
-
+                @if  (isset($post->cover_image))
            <div class="posted-img-div" >
-           <img width="30%" height="30%" class="posted-img" src="{{$post->cover_image}}" alt="">
+           <img width="30%" height="30%" class="posted-img" 
+                src="{{$post->cover_image}}" alt="">
            </div>
-         
+           @endif
                      <button class="btn btn-sm ">
                   <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
                    <span>コメントする</span>   
