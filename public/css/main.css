@@ -107,7 +107,7 @@ box-shadow: 2px 2px 5px #ccc;
 
 
 .posted-img-div{
-	width: 50%;
+	width: 100%;
 	height: auto;
 }
 
@@ -115,6 +115,8 @@ box-shadow: 2px 2px 5px #ccc;
 	margin-bottom: 8px;
 	margin-top: 8px;
 	margin-left: 10px;
+	width: 200px;
+	height: 200px;
 }
 
 
@@ -240,9 +242,10 @@ footer {
 		margin-bottom: 8px;
 		margin-top: 8px;
 		margin-left: 10px;
-		width:150px;
 		height: auto;
-	}
+		width: 100px;
+	  height: 100px;
+ 	}
 }
 
 @media  (max-width:500px) {
