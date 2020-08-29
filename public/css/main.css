@@ -105,8 +105,8 @@ height: auto;
 
 
 /* posts.indexの写真 */
-
-/*元々 */
+/* 
+元々 */
 /* .header{
 	background-color: #66ccff;
 	color: white;
@@ -118,10 +118,12 @@ height: auto;
 	justify-content: center;
 	margin-top: 20px;
 	border-radius: 5px;
-	overflow: auto;  /*消すかも*/
-} */
+	overflow: auto;  /*消すかも */
+/* } */ 
 
-
+.posted-img-div-none{
+display:none
+}
 
 .posted-img-div{
 	width: 100%;

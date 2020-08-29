@@ -103,12 +103,17 @@
                     </div>
                         
                 @endif
-              
+                @if (strpos($post->cover_image,'noimage') !== false)
+                <div class="posted-img-div-none"  >
+                    <img width="0px" height="0px" class="posted-img" 
+                         src="{{$post->cover_image}}" alt="">
+                    </div>
+                    @else
            <div class="posted-img-div" >
            <img width="30%" height="30%" class="posted-img" 
                 src="{{$post->cover_image}}" alt="">
            </div>
-      
+           @endif
                      <button class="btn btn-sm ">
                   <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
                    <span>コメントする</span>   
