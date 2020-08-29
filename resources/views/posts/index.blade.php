@@ -105,8 +105,7 @@
                 @endif
                 @if (strpos($post->cover_image,'noimage') !== false)
                 <div class="posted-img-div-none"  >
-                    <img width="0px" height="0px" class="posted-img" 
-                         src="{{$post->cover_image}}" alt="">
+                  
                     </div>
                     @else
            <div class="posted-img-div" >
