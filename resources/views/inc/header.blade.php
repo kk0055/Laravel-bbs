@@ -1,7 +1,8 @@
 <header class="header">
   <div class="container mt-3">
     <div class="head-title">
-      <h1>**Malaysia ** </br>マレーシア ペットちゃんねる</h1>  
+      <h1 class="title"> ** Malaysia **</h1>
+      <h2>マレーシア ペットちゃんねる</h2>   
       <h4 class="mt-3 head-des"> マレーシアに住む人がペットの自慢をしたり情報を共有するサイトだよ <span><img  class="img-top" src="https://image.freepik.com/free-vector/cute-siberian-husky-dog-paws-up-wall-cartoon_42750-520.jpg" alt="Smiling shiba inu dog face flat design Premium Vector" width="70px"></span></h4>  
 
 

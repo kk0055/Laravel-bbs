@@ -26,7 +26,6 @@ body{
 	border-style: ridge;
 	border-width: 5px;
 	border-radius: 50px;
-	font-family: sacramento;
 	font-family:'HuiFontP109';
 	font-size: 30px;
 }
@@ -261,6 +260,7 @@ footer {
 	.header h1{
 		font-size: 25px;
 		text-align: center;
+		font-family: sacramento;
 	}
 	.header p{
 		font-size: 25px;
@@ -303,6 +303,7 @@ footer {
 	.header h1{
 		font-size: 20px;
 		text-align: center;	
+		font-family: sacramento;
 	}
 	.header p{
 		font-size: 20px;
