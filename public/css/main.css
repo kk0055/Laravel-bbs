@@ -27,6 +27,13 @@ body{
 	border-width: 5px;
 	border-radius: 50px;
 	font-family: sacramento;
+	font-family:'HuiFontP109';
+	font-size: 30px;
+}
+
+h1.title{
+	font-family: sacramento;
+	font-size: 30px;
 }
 
 .twitter-share-button{
@@ -303,3 +310,16 @@ footer {
 	}
 
 }
+
+/*WEBフォントで「ふい字(HuiFontP109)」 ver130717
+http://customtemplate.blog112.fc2.com/blog-entry-143.html
+*/
+@font-face{
+	font-family:'HuiFontP109';
+	src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot');
+	src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot?#iefix') format('embedded-opentype'),
+	url('https://dl.dropboxusercontent.com/s/7pscemjdvt0wyiq/HuiFontP109.woff') format('woff'),
+	url('https://dl.dropboxusercontent.com/s/0w9uuopxrns8ehi/HuiFontP109.ttf') format('truetype'),
+	url('https://dl.dropboxusercontent.com/s/xnnsbxtz8o6d98i/HuiFontP109.svg#HuiFontP109') format('svg');
+	}
+	body,input,textarea{font-family:'HuiFontP109';font-size:16px;}
