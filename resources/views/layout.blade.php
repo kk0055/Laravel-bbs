@@ -12,10 +12,16 @@
 </script>
     <meta charset="UTF-8">
     <meta name="description" content="マレーシア ペットちゃんねるはマレーシアでペットを飼っている人達が情報共有できる掲示板。">
-    <meta name="keywords" content="犬,マレーシア,ペット,海外,東南アジア,掲示板">
+    <meta name="keywords" content="マレーシア ペットちゃんねる,犬,マレーシア,ペット,海外,東南アジア,掲示板">
+ <meta property="og:title" content="マレーシア ペット掲示板" />
+<meta property="og:type" content="マレーシア ペット掲示板" />
+<meta property="og:url" content="https://dry-journey-16818.herokuapp.com/" />
+<meta property="og:image" content="https://image.freepik.com/free-vector/cute-siberian-husky-dog-paws-up-wall-cartoon_42750-520.jpg" />
+<meta property="og:site_name" content="マレーシア ペットちゃんねる" />
+<meta property="og:description" content="マレーシアに住む人がペットの画像を投稿したり情報を共有する掲示板サイト" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-    <title>マレーシア ペットちゃんねる</title>
+    <title>マレーシア ペット掲示板</title>
   
     <link
         rel="stylesheet"
