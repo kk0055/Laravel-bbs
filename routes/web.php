@@ -17,11 +17,11 @@ Route::get('/', 'PostsController@index')->name('top');
 Route::resource('posts', 'PostsController', ['only' => ['create', 'store','show', 'edit', 'update','destroy']]);
 Route::resource('comments', 'CommentsController',['only' =>['store']]);
 
-// Route::get('/albums', 'AlbumsController@index');
 // Route::get('/albums/create', 'AlbumsController@create');
-Route::get('/albums', 'AlbumsController@index');
-Route::get('/albums/create', 'AlbumsController@create');
+Route::get('/albums', 'AlbumsController@index')->name('album');
 Route::post('/albums/store', 'AlbumsController@store')->name('store');
+Route::resource('albums', 'AlbumsController',['only' => ['show','create','destroy']]);;
+
 
 
 Route::get('/consultation', 'ConsultationController@index')->name('consultation');

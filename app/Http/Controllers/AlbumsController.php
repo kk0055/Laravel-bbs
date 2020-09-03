@@ -64,7 +64,7 @@ class AlbumsController extends Controller
             return redirect('/albums')->with('success','写真が投稿されました');
     }
 
-  public function show()
+  public function show($id)
   {
     $album = Album::findOrFail($id);
 
@@ -75,13 +75,10 @@ class AlbumsController extends Controller
 
   public function destroy($id)
   {
-      $album = Album::findOrFail($id);
-   
-      \DB::transaction(function () use ($album) {
-          $album->id()->delete();
-          
-      });
-
-      return redirect()->route('top');
+      $album = Album::find($id);
+      $album->delete();
+    //    return view('albums.delete')->with('album',$album);   
+     
+      return redirect()->route('album');
   }
 }
