@@ -9,11 +9,16 @@
        
             <div class="row">
                 <div class="menu ">
+                  {{-- <button class="btn btn-album btn-sm ">
+                    <a href="/" class="btn btn-album-text">ホーム</a>
+                   </button> --}}
                   <button class="btn btn-album btn-sm  ">
-             <a href="/albums">アルバム</a>
+             <a href="/albums" >アルバム</a>
             </button>
-            <button class="btn btn-album btn-sm mr-3">
-              <a href="/">ホーム</a>
+          
+
+             <button class="btn btn-album btn-sm mr-3">
+              <a href="/consultation" >相談ごと</a>
              </button>
 
              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" > </a>

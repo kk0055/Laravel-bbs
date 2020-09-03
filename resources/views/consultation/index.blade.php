@@ -1,17 +1,53 @@
 @extends('layout')
 
 @section('content')
-@include('inc.header')
+<header class="header">
+  <div class="container mt-3">
+    <div class="head-title">
+      <h1 class="title"> </h1>
+      <h2>相談コーナー</h2>   
+      <h4 class="mt-3 head-des"> 相談ごとはここに書こう <span><img  class="img-top" src="https://image.freepik.com/free-vector/cute-siberian-husky-dog-paws-up-wall-cartoon_42750-520.jpg" alt="Smiling shiba inu dog face flat design Premium Vector" width="70px"></span></h4>  
+
+
+       
+            <div class="row">
+                <div class="menu ">
+                  <button class="btn btn-album btn-sm ">
+                    <a href="/">ホーム</a>
+                   </button>
+                  <button class="btn btn-album btn-sm  ">
+             <a href="/albums">アルバム</a>
+            </button>
+          
+
+             {{-- <button class="btn btn-album btn-sm mr-3">
+              <a href="/consultation">相談ごと</a>
+             </button> --}}
+
+             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" > </a>
+             {{-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"target="_blank" >
+              <img src="https://noode.info/images/icon_twitter.png" alt="ツイッターでこのサイトをシェアする" title="ツイッターでこのサイトをシェアする" class="twitter-share-button " data-text="マレーシア ペットちゃんねる" width="30" height="30">
+             </a>  --}}
+             
+          </div>
+            </div>
+          
+        </div>
+        
+  </div>
+  
+</header>
+
 
     <div class="container-posts">
       <div class="mb-4">
         <div class="container mt-4">
             <div class="border p-4">
                 <h1 class="h5 mb-2">
-                    なんでも書いてね
+                    相談する
                 </h1>
     
-                <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data" >
+                <form method="POST" action="{{ route('consultation.store') }}" enctype="multipart/form-data" >
                     @csrf
     
                     <fieldset class="mb-4">
@@ -50,13 +86,13 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="form-group">   
+                        {{-- <div class="form-group">   
                     
                             <input type="file" name="cover_image"> 
                     
-                                </div>
+                                </div> --}}
                         <div class="mt-2">
-                            <a class="btn btn-secondary" href="{{ route('top') }}">
+                            <a class="btn btn-secondary" href="{{ route('consultation') }}">
                                 キャンセル
                             </a>
                       
@@ -114,13 +150,13 @@
            </div>
            @endif
                      <button class="btn btn-sm ">
-                  <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
+                  <a class="card-link" href="{{  route('consultation.show', ['consultation' => $post]) }}">
                    <span>コメントする</span>   
                   </a>
                 </button>
-                @if ($post->comments->count())
+                @if ($post->comment_to_consultations->count())
                 <span class="badge badge-info ml-2">
-                    コメント {{ $post->comments->count() }}件
+                    コメント {{ $post->comment_to_consultations->count() }}件
                 </span>
             @endif
                 </div>

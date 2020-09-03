@@ -22,3 +22,9 @@ Route::resource('comments', 'CommentsController',['only' =>['store']]);
 Route::get('/albums', 'AlbumsController@index');
 Route::get('/albums/create', 'AlbumsController@create');
 Route::post('/albums/store', 'AlbumsController@store')->name('store');
+
+
+Route::get('/consultation', 'ConsultationController@index')->name('consultation');
+Route::resource('consultation', 'ConsultationController', ['only' => ['create', 'store','show', 'edit', 'update','destroy']]);
+
+Route::post('/consultation/comments', 'CommentsConsulController@store')->name('CommentsConsul.store');
