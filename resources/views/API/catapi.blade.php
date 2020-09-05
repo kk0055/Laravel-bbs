@@ -21,30 +21,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <div id="app">
     <v-app>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">ホーム <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">アルバム</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">相談ごと</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/cat">にゃんだー</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dog">わんだー</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      @include('inc.nav')
       
         <v-container>
      
