@@ -125,4 +125,16 @@ class PostsController extends Controller
 
         return redirect()->route('top');
     }
+
+    public function cat()
+    {
+        
+        return view('api.catapi');
+    }
+
+    public function dog()
+    {
+        
+        return view('api.dogapi');
+    }
 }
