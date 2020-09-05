@@ -3,7 +3,7 @@
 @section('content')
 
 
-  @include('inc.nav')
+  @include('inc.album-nav')
  <div class="responsive">
    <div>
   <h1 class="album-title-main">アルバム</h1>

@@ -1,0 +1,85 @@
+
+.v-btn:before {
+  border-radius: inherit;
+  color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  opacity: .12;
+  -webkit-transition: .3s cubic-bezier(.25,.8,.5,1);
+  transition: .3s cubic-bezier(.25,.8,.5,1);
+  width: 100%;
+}
+
+.rate-btn {
+	width: 100px;
+	height:100px;
+	border-radius: 70px;
+	background: #FFF;
+	border: 5px solid #f0f0f0;
+	float: left;
+  box-shadow: 1px 1px 1px 0px #e9e9e9;
+  
+}
+.rate-btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+
+.rate-btn:nth-child(1) {
+	margin-left: 4px;
+	margin-right: 10px;
+	background: url(http://web.arjentienkamp.com/codepen/tinder/delete.png);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+.rate-btn:nth-child(2) {
+	margin-left: 10px;
+	background: url(http://web.arjentienkamp.com/codepen/tinder/heart.png);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/******************/
+
+
+
+.buddy {
+  background: #fff;
+  border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #fff;
+  /* padding: 20px;
+  width: 360px;
+  height: 360px; */
+  cursor: hand;
+}
+
+.avatar {
+	background: #fff;
+  width: 320px;
+  height: 320px;
+  display: block;
+  margin-top: 1px;
+  margin-left: 10px;
+  background-size: auto 160% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@font-face{
+	font-family:'HuiFontP109';
+	src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot');
+	src:url('https://dl.dropboxusercontent.com/s/6snqvg654tirsyv/HuiFontP109.eot?#iefix') format('embedded-opentype'),
+	url('https://dl.dropboxusercontent.com/s/7pscemjdvt0wyiq/HuiFontP109.woff') format('woff'),
+	url('https://dl.dropboxusercontent.com/s/0w9uuopxrns8ehi/HuiFontP109.ttf') format('truetype'),
+	url('https://dl.dropboxusercontent.com/s/xnnsbxtz8o6d98i/HuiFontP109.svg#HuiFontP109') format('svg');
+	}
+	*{font-family:'HuiFontP109';font-size:16px;}

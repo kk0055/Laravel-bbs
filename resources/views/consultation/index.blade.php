@@ -7,17 +7,17 @@
       <h1 class="title"> </h1>
       <h2>相談コーナー</h2>   
       <h4 class="mt-3 head-des"> 相談ごとはここに書こう <span><img  class="img-top" src="https://image.freepik.com/free-vector/cute-siberian-husky-dog-paws-up-wall-cartoon_42750-520.jpg" alt="Smiling shiba inu dog face flat design Premium Vector" width="70px"></span></h4>  
-
+   
 
        
-            <div class="row">
+            {{-- <div class="row">
                 <div class="menu ">
                   <button class="btn btn-album btn-sm ">
                     <a href="/">ホーム</a>
                    </button>
                   <button class="btn btn-album btn-sm  ">
              <a href="/albums">アルバム</a>
-            </button>
+            </button> --}}
           
 
              {{-- <button class="btn btn-album btn-sm mr-3">
@@ -37,7 +37,7 @@
   </div>
   
 </header>
-
+@include('inc.nav')
 
     <div class="container-posts">
       <div class="mb-4">
@@ -96,7 +96,7 @@
                                 キャンセル
                             </a>
                       
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary"style="color:white;">
                                 投稿する
                             </button>
                         </div>

@@ -28,3 +28,5 @@ Route::get('/consultation', 'ConsultationController@index')->name('consultation'
 Route::resource('consultation', 'ConsultationController', ['only' => ['create', 'store','show', 'edit', 'update','destroy']]);
 
 Route::post('/consultation/comments', 'CommentsConsulController@store')->name('CommentsConsul.store');
+Route::get('/cat', function() {return view('api.catapi');});
+Route::get('/dog', function() {return view('api.dogapi');});

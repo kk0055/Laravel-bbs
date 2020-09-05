@@ -1,8 +1,9 @@
 @extends('layout')
 
 @section('content')
-@include('inc.header')
 
+@include('inc.header')
+@include('inc.nav')
     <div class="container-posts">
       <div class="mb-4">
         <div class="container mt-4">
@@ -60,7 +61,7 @@
                                 キャンセル
                             </a>
                       
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary"style="color:white;">
                                 投稿する
                             </button>
                         </div>
