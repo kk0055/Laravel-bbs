@@ -14,10 +14,10 @@
         <a class="nav-link" href="/consultation">相談ごと</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/cat">にゃんだー</a>
+        <a class="nav-link" href="/api/cat">にゃんだー</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/dog">わんだー</a>
+        <a class="nav-link" href="/api/dog">わんだー</a>
       </li>
     </ul>
   </div>
