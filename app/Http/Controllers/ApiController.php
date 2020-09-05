@@ -9,12 +9,12 @@ class ApiController extends Controller
     public function cat()
     {
         
-        return view('api.catapi');
+        return view('api.cat');
     }
 
     public function dog()
     {
         
-        return view('api.dogapi');
+        return view('api.dog');
     }
 }
