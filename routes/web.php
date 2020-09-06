@@ -2,16 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+
 
 Route::get('/', 'PostsController@index')->name('top');
 Route::resource('posts', 'PostsController', ['only' => ['create', 'store','show', 'edit', 'update','destroy']]);
@@ -26,9 +18,11 @@ Route::resource('albums', 'AlbumsController',['only' => ['show','create','destro
 
 Route::get('/consultation', 'ConsultationController@index')->name('consultation');
 Route::resource('consultation', 'ConsultationController', ['only' => ['create', 'store','show', 'edit', 'update','destroy']]);
-
 Route::post('/consultation/comments', 'CommentsConsulController@store')->name('CommentsConsul.store');
-// Route::get('/cat', function() {return view('api.catapi');});
+
+// API
 Route::get('/api/cat', 'ApiController@cat')->name('cat');
 Route::get('/api/dog', 'ApiController@dog')->name('dog');
-// Route::get('/dog', function() {return view('api.dogapi');});
+
+//Twitter
+Route::get('twitter', 'TwitterController@index');

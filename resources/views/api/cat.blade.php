@@ -25,14 +25,13 @@
       
         <v-container>
      
-
-            <v-layout row wrap>
-                <v-flex xs12 >
-                <v-card flat tile class="d-flex buddy"  >
+            <v-layout >
+                <v-flex class="d-flex justify-content-center" >
+                <v-card flat tile class=" buddy"  >
                     <v-img :src="image.url"class="v-img avatar" contain  >
                     </v-img>
                 </v-card>
-                </v-flex>
+                
             </v-layout>
             <v-layout align-center justify-center mt-5 >
               <!-- <v-btn class="v-btn v-btn--large  mr-5" color="red " dark large @click="loadNextImage" >
@@ -48,6 +47,7 @@
                 LIKE &nbsp; <v-icon>thumb_up</v-icon>
             </v-btn> -->
           </v-layout>
+        </v-flex>
         </v-container>
       </v-content>
     </v-app>

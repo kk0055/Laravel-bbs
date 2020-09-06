@@ -30,7 +30,7 @@
 }
 
 .rate-btn:nth-child(1) {
-	margin-left: 4px;
+	
 	margin-right: 10px;
 	background: url(http://web.arjentienkamp.com/codepen/tinder/delete.png);
 	background-size: 25px;
@@ -64,11 +64,9 @@
 
 .avatar {
 	background: #fff;
-  width: 320px;
+  width: 350px;
   height: 320px;
   display: block;
-  margin-top: 1px;
-  margin-left: 10px;
   background-size: auto 160% !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,4 +80,6 @@
 	url('https://dl.dropboxusercontent.com/s/0w9uuopxrns8ehi/HuiFontP109.ttf') format('truetype'),
 	url('https://dl.dropboxusercontent.com/s/xnnsbxtz8o6d98i/HuiFontP109.svg#HuiFontP109') format('svg');
 	}
-	*{font-family:'HuiFontP109';font-size:16px;}
+  *{font-family:'HuiFontP109';font-size:16px;}
+  
+  

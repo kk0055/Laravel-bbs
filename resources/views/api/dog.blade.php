@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" href="/css/api.css">
 </head>
 <body>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -19,18 +18,20 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <link rel="stylesheet" href="/css/api.css">
   <div id="app">
     <v-app>
       @include('inc.nav')
       
         <v-container>
-            <v-layout row wrap>
-                <v-flex xs12 >
-                <v-card flat tile class="d-flex buddy"  >
+  
+            <v-layout container>
+                <v-flex class="d-flex justify-content-center" >
+                <v-card flat tile class=" buddy"  >
                     <v-img :src="image.url"class="v-img avatar" contain  >
                     </v-img>
                 </v-card>
-                </v-flex>
+                
             </v-layout>
             <v-layout align-center justify-center mt-5 >
               <!-- <v-btn class="v-btn v-btn--large  mr-5" color="red " dark large @click="loadNextImage" >
@@ -46,6 +47,7 @@
                 LIKE &nbsp; <v-icon>thumb_up</v-icon>
             </v-btn> -->
           </v-layout>
+        </v-flex>
         </v-container>
       </v-content>
     </v-app>
@@ -69,8 +71,8 @@
 
                     let response = await axios.get('https://api.thedogapi.com/v1/images/search', { params: { limit:1, size:"full" } } ) // Ask for 1 Image, at full resolution
                     
-                     //dog API URL
-                     //https://api.thedogapi.com/v1/images/search
+                    //  dog API URL
+                    //  https://api.thedogapi.com/v1/images/search
 
                     this.image = response.data[0] // the response is an Array, so just use the first item as the Image
 
