@@ -121,7 +121,9 @@
                 </button>
                 @if ($post->comments->count())
                 <span class="badge badge-info ml-2">
+                    <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}" style="color:white;">
                     コメント {{ $post->comments->count() }}件
+                </a>
                 </span>
             @endif
                 </div>

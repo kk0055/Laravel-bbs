@@ -4,9 +4,20 @@
 
     <div class="container">
 　　　   {{-- コントローラーで取得した$resultをforeachで回す --}}
-        @foreach ($result['q'] as  $v)
+        {{-- @foreach ($result as $key => $tweet ) --}}
       
-            {{$v}}
+        @if (!empty($result))
+        @foreach ($result as $key => $tweet)
+        <div class="well">
+        <h3>{{$tweet->id}}</h3>
+        </div>    
+        
+        @endforeach
+      @else
+          <p>No Tweet found</p>
+     
+          
+      @endif
             <div class="card mb-2">
                 <div class="card-body">
                     <div class="media">
@@ -30,7 +41,7 @@
             </div>
           
         
-        @endforeach
+        {{-- @endforeach --}}
     </div>
 
 @endsection

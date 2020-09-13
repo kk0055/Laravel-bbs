@@ -22,21 +22,14 @@ class TwitterController extends Controller
 
         // $result= \Twitter::get("search/tweets", array("q" => "rainy", 'count' => 20));
         $result= \Twitter::get("search/tweets", array("q" => "rainy", 'count' => 20));
-        // $result = \Twitter::get(array('q' => '#viernesdezapatillas since:2015-07-01 filter:images', 'count' => 10));
-  
-    // $response = $client->get('search/tweets.json', [
-    //         'query' => ['q' => $query]
-    //         ]);
+        // $result= \Twitter::get("search/tweets", array("q" => "rainy", 'format' => 'array'));
+        // $result= \ Twitter::get('search/tweets', 'GET', array('q' => '検索ワード', 'format' => 'array'));
+      
+        
+     
 
-    // $body = json_decode($response->getBody()->getContents(), true);
-    // $statuses = array_get($body, 'statuses');
-    // $tweet = array_fetch($statuses, 'text');
-
-
-         return view('twitter', [
-                "result" => $result,
-    
-            ]);
+        
+         return view('twitter', compact('result'));
    
             //  $result['q']
    

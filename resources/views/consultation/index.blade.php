@@ -152,11 +152,13 @@
                      <button class="btn btn-sm ">
                   <a class="card-link" href="{{  route('consultation.show', ['consultation' => $post]) }}">
                    <span>コメントする</span>   
-                  </a>
+                </a>
                 </button>
                 @if ($post->comment_to_consultations->count())
                 <span class="badge badge-info ml-2">
+                    <a class="card-link" href="{{  route('consultation.show', ['consultation' => $post]) }}" style="color:white;">
                     コメント {{ $post->comment_to_consultations->count() }}件
+                 </a>
                 </span>
             @endif
                 </div>
