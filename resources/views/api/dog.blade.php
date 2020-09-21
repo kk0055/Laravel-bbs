@@ -37,7 +37,7 @@
               <!-- <v-btn class="v-btn v-btn--large  mr-5" color="red " dark large @click="loadNextImage" >
                   NOPE  &nbsp; <v-icon>thumb_down</v-icon>
               </v-btn> -->
-              <div id="disp_count_no" class="mr-2">0</div>
+        
               
               <btn class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" >
             </btn>
@@ -45,7 +45,7 @@
             <btn class="rate-btn"  id="btn_count_up"  @click="loadNextImage" >
             </btn>
             
-            <div id="disp_count" class="ml-2">0</div>
+         
 
 
               <!-- <v-btn class="v-btn v-btn--large  theme--light green mr-5" dark large @click="loadNextImage" >
@@ -54,6 +54,9 @@
           </v-layout>
         </v-flex>
         </v-container>
+        <div class="d-flex justify-content-center mt-2">
+          <div id="disp_count_no" class="mr-15 ">0</div> 
+          <div id="disp_count" class="ml-15">0</div> 
       </v-content>
     </v-app>
   </div>
