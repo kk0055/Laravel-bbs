@@ -39,11 +39,11 @@
               </v-btn> -->
              
               
-              <button class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" >
-            </button>
+              <btn class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" >
+            </btn>
    
-            <button class="rate-btn"  id="btn_count_up"  @click="loadNextImage" >
-            </button>
+            <btn class="rate-btn"  id="btn_count_up"  @click="loadNextImage" >
+            </btn>
     
               <!-- <v-btn class="v-btn v-btn--large  theme--light green mr-5" dark large @click="loadNextImage" >
                 LIKE &nbsp; <v-icon>thumb_up</v-icon>
