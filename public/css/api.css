@@ -29,7 +29,7 @@
   border-bottom: none;
 }
 
-.rate-btn:nth-child(2) {
+#btn_count_up_no {
 	
 	margin-right: 10px;
 	background: url(http://web.arjentienkamp.com/codepen/tinder/delete.png);
@@ -39,7 +39,7 @@
 }
 
 
-.rate-btn:nth-child(3) {
+#btn_count_up {
 	margin-left: 10px;
 	background: url(http://web.arjentienkamp.com/codepen/tinder/heart.png);
 	background-size: 25px;
