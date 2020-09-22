@@ -289,12 +289,12 @@ footer {
   	width:90%;
 		justify-content: center;	
 	}
-	.a-title{
+	/* .a-title{
 		display:none;
 	}
 	.des{
 			display:none;
-	}
+	} */
 	.top-bar{
 		display: flex;
 		flex-direction: column;
