@@ -18,7 +18,7 @@
                           <a class="nav-link" href="/">アカウントを作成</a>
                       </li> -->
                                                           <li class="nav-item">
-                <a class="btn btn-primary newpost_btn mt-2" href="/albums/create">画像を投稿する</a>
+                <a class="btn  newpost_btn mt-2" href="/albums/create">画像を投稿する</a>
               </li>
           </ul>
       </div>

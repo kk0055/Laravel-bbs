@@ -3,7 +3,7 @@
 @section('content')
 
 
-  @include('inc.album-nav')
+  @include('inc.nav')
  <div class="responsive">
    <div>
   <h1 class="album-title-main">アルバム</h1>
@@ -13,7 +13,9 @@
     </div>
 
 
-
+    <div class="nav-item">
+      <a class="btn  newpost_btn mt-2" href="/albums/create" style="color:white;">画像を投稿する</a>
+    </div>
 
   </div>
   <div class="gallery">

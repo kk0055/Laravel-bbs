@@ -52,11 +52,11 @@
                 
                             </div>
                     <div class="mt-5">
-                        <a class="btn btn-secondary" href="/albums">
+                        <a class="btn" href="/albums" style="color:white;">
                             キャンセル
                         </a>
                   
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn">
                             投稿する
                         </button>
                     </div>

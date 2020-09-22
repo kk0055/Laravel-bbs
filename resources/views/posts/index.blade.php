@@ -110,8 +110,10 @@
                     </div>
                     @else
            <div class="posted-img-div" >
+               <a href="{{$post->cover_image}}" class="img-fluid">
            <img width="30%" height="30%" class="posted-img" 
                 src="{{$post->cover_image}}" alt="">
+            </a>
            </div>
            @endif
                      <button class="btn btn-sm ">
