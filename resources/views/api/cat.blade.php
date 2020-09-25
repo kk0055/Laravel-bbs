@@ -27,8 +27,8 @@
      
             <v-layout >
                 <v-flex class="d-flex justify-content-center" >
-                <v-card flat tile class=" buddy"  >
-                    <v-img :src="image.url"  class="v-img avatar" contain  >
+                <v-card flat tile class=" buddy" >
+                    <v-img :src="image.url"  class="v-img avatar" contain id="img"   >
                     </v-img>
                 </v-card>
                 
@@ -104,6 +104,7 @@ window.onload = function() {
   var count_disp_no = document.getElementById("disp_count_no");  
   var count_up_btn = document.getElementById("btn_count_up");
   var count_up_btn_no = document.getElementById("btn_count_up_no");
+  var img = document.getElementById("img");
   var count_value = 0;
   var count_value_no = 0;
 
@@ -116,8 +117,19 @@ window.onload = function() {
  count_up_btn_no.onclick = function (){
       count_value_no += 1;
       count_disp_no.innerHTML = count_value_no ;
-      
+
+//       if ( (count_disp_no.innerHTML % 3 == 0)){
+
+//         img.src  = 'https://www.google.com/search?q=ao&rlz=1C1CHBD_enMY809MY809&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi3uoTZj4LsAhXEe30KHSm-CCMQ_AUoAXoECA0QAw&biw=1242&bih=568#imgrc=wn9I4F9w38ALLM'
+        
+// }else{
+       
+// }
+
  };
+
+
+
 }
 </script>
 </body>

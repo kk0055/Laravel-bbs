@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container">
-　　　   {{-- コントローラーで取得した$resultをforeachで回す --}}
+  {{-- コントローラーで取得した$resultをforeachで回す --}}
         {{-- @foreach ($result as $key => $tweet ) --}}
       
         @if (!empty($result))
