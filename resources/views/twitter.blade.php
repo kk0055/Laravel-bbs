@@ -2,15 +2,21 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container ">
+        <div class="card-mb-4">
   {{-- コントローラーで取得した$resultをforeachで回す --}}
         {{-- @foreach ($result as $key => $tweet ) --}}
-      
-        @if (!empty($result))
+        <a class="twitter-timeline " href="https://twitter.com/malaysia_pet?ref_src=twsrc%5Etfw">Tweets by malaysia_pet</a> 
+    </div> 
+    </div> 
+
+
+
+        {{-- @if (!empty($result))
         @foreach ($result as $key => $tweet)
         <div class="well">
         <h3>{{$tweet->id}}</h3>
-        </div>    
+          
         
         @endforeach
       @else
@@ -24,11 +30,11 @@
                         <img src="https://placehold.jp/70x70.png" class="rounded-circle mr-4">
                         <div class="media-body">
                          
-                            {{-- <h5 class="d-inline mr-3"><strong> {{ $tweet->user->name }} </strong></h5>
+                       <h5 class="d-inline mr-3"><strong> {{ $tweet->user->name }} </strong></h5>
                              <h6 class="d-inline text-secondary">{{ date('Y/m/d', strtotime($tweet->created_at)) }}</h6>
                             <p class="mt-3 mb-0">{{ $tweet->text }}</p>    --}}
 
-                        </div>
+                         {{-- </div>
                     </div>
                 </div>
                 <div class="card-footer bg-white border-top-0">
@@ -41,7 +47,7 @@
             </div>
           
         
-        {{-- @endforeach --}}
-    </div>
+        @endforeach 
+    </div> --}} 
 
 @endsection

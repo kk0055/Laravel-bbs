@@ -78,13 +78,14 @@
             {
                 try{
                     axios.defaults.headers.common['x-api-key'] = "" // Replace this with your API Key
-
                     let response = await axios.get('https://api.thecatapi.com/v1/images/search', { params: { limit:1, size:"full" } } ) // Ask for 1 Image, at full resolution
-                    
+            
+                      this.image = response.data[0]
+                 
                     //  dog API URL
                     //  https://api.thedogapi.com/v1/images/search
 
-                    this.image = response.data[0] // the response is an Array, so just use the first item as the Image
+                   // the response is an Array, so just use the first item as the Image
 
                     console.log("-- Image from TheCatAPI.com")
                     console.log("id:", this.image.id)
