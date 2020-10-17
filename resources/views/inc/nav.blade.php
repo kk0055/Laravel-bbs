@@ -19,6 +19,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/api/dog">わんだー</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/twitter">つぶやき</a>
+      </li>
     </ul>
   </div>
 </nav>

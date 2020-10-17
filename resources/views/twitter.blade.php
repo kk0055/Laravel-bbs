@@ -1,15 +1,14 @@
 @extends('layout')
 
 @section('content')
-
-    <div class="container ">
-        <div class="card-mb-4">
-  {{-- コントローラーで取得した$resultをforeachで回す --}}
-        {{-- @foreach ($result as $key => $tweet ) --}}
-        <a class="twitter-timeline " href="https://twitter.com/malaysia_pet?ref_src=twsrc%5Etfw">Tweets by malaysia_pet</a> 
+@include('inc.nav')
+ 
+        <div class="row d-flex justify-content-center">
+            <div class="col-xs">
+             
+              <a class="twitter-timeline " href="https://twitter.com/malaysia_pet?ref_src=twsrc%5Etfw">Tweets </a>   
     </div> 
     </div> 
-
 
 
         {{-- @if (!empty($result))
