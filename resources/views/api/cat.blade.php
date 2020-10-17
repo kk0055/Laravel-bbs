@@ -45,10 +45,10 @@
             <button class="rate-btn"  id="btn_count_up"  @click="loadNextImage" >
             </button> --}}
     
-            <btn class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" >
+            <btn class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" style="background-image: url('/images/delete.png');" >
             </btn>
    
-            <btn class="rate-btn"  id="btn_count_up"  @click="loadNextImage" >
+            <btn class="rate-btn"  id="btn_count_up"  @click="loadNextImage" style="background-image: url('/images/heart.png');" >
             </btn>
               <!-- <v-btn class="v-btn v-btn--large  theme--light green mr-5" dark large @click="loadNextImage" >
                 LIKE &nbsp; <v-icon>thumb_up</v-icon>
