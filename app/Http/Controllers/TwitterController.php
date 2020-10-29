@@ -27,7 +27,7 @@ class TwitterController extends Controller
 
          
     
-  dump($results);
+//   dump($results);
         
 // return view('twitter', [
 //     "result" => $result
