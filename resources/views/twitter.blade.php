@@ -10,6 +10,11 @@
     </div> 
     </div> 
 
+{{-- @foreach ($results as $item)
+    
+{{ $item }}
+@endforeach --}}
+    
 
         {{-- @if (!empty($result))
         @foreach ($result as $key => $tweet)
