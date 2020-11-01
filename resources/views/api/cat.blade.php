@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -16,9 +16,10 @@
 <!-- JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
+
   <div id="app">
     <v-app>
       @include('inc.nav')
@@ -34,25 +35,13 @@
                 
             </v-layout>
             <v-layout align-center justify-center mt-5 >
-              <!-- <v-btn class="v-btn v-btn--large  mr-5" color="red " dark large @click="loadNextImage" >
-                  NOPE  &nbsp; <v-icon>thumb_down</v-icon>
-              </v-btn> -->
-             
-              
-              {{-- <button class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" >
+      
+            <button class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" style="background-image: url('/images/delete.png');" >
             </button>
    
-            <button class="rate-btn"  id="btn_count_up"  @click="loadNextImage" >
-            </button> --}}
-    
-            <btn class="rate-btn" id="btn_count_up_no"  @click="loadNextImage" style="background-image: url('/images/delete.png');" >
-            </btn>
-   
-            <btn class="rate-btn"  id="btn_count_up"  @click="loadNextImage" style="background-image: url('/images/heart.png');" >
-            </btn>
-              <!-- <v-btn class="v-btn v-btn--large  theme--light green mr-5" dark large @click="loadNextImage" >
-                LIKE &nbsp; <v-icon>thumb_up</v-icon>
-            </v-btn> -->
+            <button class="rate-btn"  id="btn_count_up"  @click="loadNextImage" style="background-image: url('/images/heart.png');" >
+            </button>
+            
           </v-layout>
         
         </v-flex>
@@ -68,42 +57,7 @@
     </v-app>
   </div>
  
-  <script>
-    new Vue({ 
-        el: '#app',
-        vuetify: new Vuetify(),
-        data: {
-            image: { url: ""}
-        },
-        created(){
-            this.loadNextImage();
-        } ,
-        methods:{
-            async loadNextImage()
-            {
-                try{
-                    axios.defaults.headers.common['x-api-key'] = "" // Replace this with your API Key
-                    let response = await axios.get('https://api.thecatapi.com/v1/images/search', { params: { limit:1, size:"full" } } ) // Ask for 1 Image, at full resolution
-            
-                      this.image = response.data[0]
-                 
-                    //  dog API URL
-                    //  https://api.thedogapi.com/v1/images/search
 
-                   // the response is an Array, so just use the first item as the Image
-
-                    console.log("-- Image from TheCatAPI.com")
-                    console.log("id:", this.image.id)
-                    console.log("url:", this.image.url)
-
-                }catch(err){
-                    console.log(err)
-                }
-            }
-        }
-    });
-
-  </script>
 <script >
 window.onload = function() {
   var count_disp = document.getElementById("disp_count");  
@@ -114,7 +68,6 @@ window.onload = function() {
   var count_value = 0;
   var count_value_no = 0;
 
-
  count_up_btn.onclick = function (){
       count_value += 1;
       count_disp.innerHTML = count_value;
@@ -124,18 +77,7 @@ window.onload = function() {
       count_value_no += 1;
       count_disp_no.innerHTML = count_value_no ;
 
-//       if ( (count_disp_no.innerHTML % 3 == 0)){
-
-//         img.src  = 'https://www.google.com/search?q=ao&rlz=1C1CHBD_enMY809MY809&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi3uoTZj4LsAhXEe30KHSm-CCMQ_AUoAXoECA0QAw&biw=1242&bih=568#imgrc=wn9I4F9w38ALLM'
-        
-// }else{
-       
-// }
-
  };
-
-
-
 }
 </script>
 </body>
