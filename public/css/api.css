@@ -33,14 +33,12 @@
 }
 
 #btn_count_up_no {
-	
 	margin-right: 10px;
 	background: url(/images/delete.png);
 	background-size: 25px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
-
 
 #btn_count_up {
 	margin-left: 10px;
@@ -53,8 +51,7 @@
 /******************/
 
 
-
-.buddy {
+.img-body {
   background: #fff;
   border-radius: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
