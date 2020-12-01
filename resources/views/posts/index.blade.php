@@ -57,11 +57,11 @@
                     
                                 </div>
                         <div class="mt-2">
-                            <a class="btn btn-secondary" href="{{ route('top') }}">
+                            <a class="btn " style="color:white;" href="{{ route('top') }}">
                                 キャンセル
                             </a>
                       
-                            <button type="submit" class="btn btn-primary"style="color:white;">
+                            <button type="submit" class="btn "style="color:white;">
                                 投稿する
                             </button>
                         </div>
@@ -73,7 +73,7 @@
       {{-- Post --}}
       
       <div class="container mt-4">
-        <div class="d-flex justify-content-center mb-2 mt-2">
+        <div class="d-flex justify-content-center mb-2 mt-2 " >
             {{ $posts->links() }}
         </div>
             @foreach ($posts as $post)
@@ -81,11 +81,6 @@
                 
               {{-- Body --}}
              
-            
-           
-               
-
-                
                     <div class="card-body box">
 
                       {{ $post->title }} |
@@ -116,19 +111,20 @@
             </a>
            </div>
            @endif
-                     <button class="btn btn-sm ">
-                  <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
-                   <span>コメントする</span>   
-                  </a>
-                </button>
-                @if ($post->comments->count())
-                <span class="badge badge-info ml-2">
-                    <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}" style="color:white;">
-                    コメント {{ $post->comments->count() }}件
-                </a>
-                </span>
+            <button class="btn btn-sm ">
+            <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
+            <span>コメントする</span>   
+            </a>
+            </button>
+
+            @if ($post->comments->count())
+            <span class="badge badge-info ml-2">
+            <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}" style="color:white;">
+            コメント {{ $post->comments->count() }}件
+            </a>
+            </span>
             @endif
-                </div>
+    </div>
 
 
             </div>
