@@ -21,7 +21,6 @@ https://dry-journey-16818.herokuapp.com/
 
 
 <h3>環境・使用技術</h3>
-<hr>
 
 <h1>バックエンド</h1>
 <ul>
